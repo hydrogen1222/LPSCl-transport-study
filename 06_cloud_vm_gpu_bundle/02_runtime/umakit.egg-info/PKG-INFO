@@ -1,0 +1,29 @@
+Metadata-Version: 2.4
+Name: umakit
+Version: 1.0.0
+Summary: VASP-like interface for FAIRChem UMA models
+Author: FAIRChem User
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Topic :: Scientific/Engineering :: Chemistry
+Classifier: Topic :: Scientific/Engineering :: Physics
+Requires-Python: >=3.9
+Requires-Dist: fairchem-core
+Requires-Dist: ase>=3.26.0
+Requires-Dist: numpy
+Requires-Dist: tqdm
+Provides-Extra: dev
+Requires-Dist: pytest; extra == "dev"
+Requires-Dist: ruff; extra == "dev"
+Requires-Dist: mypy; extra == "dev"
+Dynamic: author
+Dynamic: classifier
+Dynamic: provides-extra
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary

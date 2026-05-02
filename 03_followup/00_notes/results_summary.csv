@@ -1,0 +1,16 @@
+structure_id,group,uma_steps,uma_converged,uma_fmax_ev_per_A,uma_max_disp_A,uma_rms_disp_A,uma_min_pair_after,cp2k_energy_Ha,cp2k_scf_failures,cp2k_warning_count,manual_review_required,recommended_action
+gb_Sigma3_t1,neutral,78,yes,0.07795506,1.506,0.437,2.051(P-S),-5659.351330653819,0,1,no,ready_for_analysis
+gb_Sigma3_t2,neutral,78,yes,0.07795514,1.506,0.437,2.051(P-S),-5659.351966423650,0,1,no,ready_for_analysis
+gb_Sigma3_t3,neutral,172,yes,0.07341854,1.835,0.663,1.953(S-S),-5661.350821909827,0,1,yes,visual_review_then_forcecheck
+gb_Sigma3_t1_Li_vac_c1_s1,vac_c1_s1,200,no,0.33143115,2.020,0.687,1.982(S-S),-5652.971321786215,0,1,no,continue_uma_then_forcecheck
+gb_Sigma3_t2_Li_vac_c1_s1,vac_c1_s1,200,no,0.30415398,2.025,0.687,1.982(P-S),-5652.972444256984,0,1,no,continue_uma_then_forcecheck
+gb_Sigma3_t3_Li_vac_c1_s1,vac_c1_s1,200,no,0.20116913,1.934,0.704,1.945(S-S),-5653.730919648462,0,1,yes,continue_uma_then_visual_review_then_forcecheck
+gb_Sigma3_t1_Li_vac_c1_s2,vac_c1_s2,200,no,0.55104631,2.026,0.659,2.031(P-S),-5652.876948531946,0,1,no,continue_uma_then_forcecheck
+gb_Sigma3_t2_Li_vac_c1_s2,vac_c1_s2,200,no,0.57887983,2.027,0.659,2.031(P-S),-5652.876863231469,0,1,no,continue_uma_then_forcecheck
+gb_Sigma3_t3_Li_vac_c1_s2,vac_c1_s2,200,no,0.14894739,1.908,0.722,1.951(S-S),-5653.835279384983,0,1,yes,continue_uma_then_visual_review_then_forcecheck
+gb_Sigma3_t1_Li_vac_c2_s1,vac_c2_s1,200,no,0.20090969,1.970,0.672,2.031(P-S),-5645.264675443561,0,1,no,continue_uma_then_forcecheck
+gb_Sigma3_t2_Li_vac_c2_s1,vac_c2_s1,200,no,0.22113656,1.958,0.667,2.031(P-S),-5645.256843519875,0,1,no,continue_uma_then_forcecheck
+gb_Sigma3_t3_Li_vac_c2_s1,vac_c2_s1,200,no,0.39406660,1.937,0.701,1.945(S-S),-5646.129078543295,0,1,yes,continue_uma_then_visual_review_then_forcecheck
+gb_Sigma3_t1_Li_vac_c2_s2,vac_c2_s2,200,no,0.20239897,1.970,0.672,2.031(P-S),-5645.264822841668,0,1,no,continue_uma_then_forcecheck
+gb_Sigma3_t2_Li_vac_c2_s2,vac_c2_s2,200,no,0.26646864,1.815,0.638,1.965(P-S),-5645.283996500865,0,1,no,continue_uma_then_forcecheck
+gb_Sigma3_t3_Li_vac_c2_s2,vac_c2_s2,200,no,0.23155646,1.942,0.701,1.945(S-S),-5646.128923953102,0,1,yes,continue_uma_then_visual_review_then_forcecheck

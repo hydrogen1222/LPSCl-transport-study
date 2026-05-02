@@ -1,0 +1,5 @@
+task_id,label_tier,target_md_steps,target_column,row_count,structure_count,evaluation_recommendation,notes
+formal_20000steps_log10D,formal,20000,log10_li_diffusion_last_half_cm2_per_s,9,3,fit-preview-only,Use temperature as an explicit input feature; absolute conductivity is not the primary ML target at this stage.
+pilot_20steps_log10D,pilot,20,log10_li_diffusion_last_half_cm2_per_s,2,2,fit-preview-only,Use temperature as an explicit input feature; absolute conductivity is not the primary ML target at this stage.
+pilot_200steps_log10D,pilot,200,log10_li_diffusion_last_half_cm2_per_s,1,1,fit-preview-only,Use temperature as an explicit input feature; absolute conductivity is not the primary ML target at this stage.
+screening_1000steps_log10D,screening,1000,log10_li_diffusion_last_half_cm2_per_s,16,8,leave-one-structure-out,Use temperature as an explicit input feature; absolute conductivity is not the primary ML target at this stage.

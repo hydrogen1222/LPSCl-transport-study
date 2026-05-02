@@ -1,0 +1,9 @@
+fairchem-core
+ase>=3.26.0
+numpy
+tqdm
+
+[dev]
+pytest
+ruff
+mypy

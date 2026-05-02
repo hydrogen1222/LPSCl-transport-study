@@ -1,0 +1,6 @@
+model,mae_log10D,rmse_log10D,n_structures
+Mean,0.1586,0.1904,20
+Ridge,0.0525,0.0653,20
+KNN,0.0534,0.0650,20
+RandomForest,0.0555,0.0649,20
+GradientBoosting,0.0617,0.0719,20

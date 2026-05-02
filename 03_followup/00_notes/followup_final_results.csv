@@ -1,0 +1,13 @@
+structure_id,translation,vacancy_family,uma_continue_steps,uma_final_fmax_ev_per_A,cp2k_singlepoint_energy_Ha,cp2k_rel_energy_within_family_eV,cp2k_max_force_au,cp2k_max_force_ev_per_A,cp2k_warning_count,cp2k_scf_failures,md_priority,recommended_role,notes
+gb_Sigma3_t1_Li_vac_c1_s1,t1,c1_s1,14,0.11888143,-5652.994497670531,20.353,0.009671599,0.497334,0,0,B_contrast,md_contrast_candidate,best t1 geometry in c1 family
+gb_Sigma3_t1_Li_vac_c1_s2,t1,c1_s2,11,0.11835966,-5652.902054055952,25.394,0.009700514,0.498820,0,0,C_hold,static_only_for_now,good geometry but energetically much higher than t3
+gb_Sigma3_t1_Li_vac_c2_s1,t1,c2_s1,12,0.14624602,-5645.282527673997,23.842,0.010882173,0.559584,0,0,C_hold,static_only_for_now,cp2k max force relatively high
+gb_Sigma3_t1_Li_vac_c2_s2,t1,c2_s2,12,0.14592496,-5645.282613242372,24.814,0.010931949,0.562143,0,0,C_hold,static_only_for_now,cp2k max force relatively high
+gb_Sigma3_t2_Li_vac_c1_s1,t2,c1_s1,13,0.14654906,-5652.992478197963,20.408,0.010323346,0.530848,0,0,C_hold,static_only_for_now,geometry acceptable but not preferred over t1 or t3
+gb_Sigma3_t2_Li_vac_c1_s2,t2,c1_s2,11,0.11850859,-5652.902032666215,25.395,0.009910188,0.509602,0,0,B_contrast,md_contrast_candidate,best t2 contrast case
+gb_Sigma3_t2_Li_vac_c2_s1,t2,c2_s1,14,0.14362414,-5645.282195941054,23.851,0.010515824,0.540745,0,0,C_hold,static_only_for_now,cp2k max force relatively high
+gb_Sigma3_t2_Li_vac_c2_s2,t2,c2_s2,21,0.14830303,-5645.352417131551,22.914,0.010205262,0.524776,0,0,C_hold,static_only_for_now,best non-t3 c2_s2 energy but still above t3
+gb_Sigma3_t3_Li_vac_c1_s1,t3,c1_s1,5,0.13870265,-5653.742445537199,0.000,0.006259467,0.321875,0,0,A_core,md_core_candidate,lowest family energy and lowest DFT force overall
+gb_Sigma3_t3_Li_vac_c1_s2,t3,c1_s2,0,0.14894748,-5653.835279385056,0.000,0.006980465,0.358950,0,0,A_core,md_core_candidate,lowest family energy with low DFT force
+gb_Sigma3_t3_Li_vac_c2_s1,t3,c2_s1,9,0.13449186,-5646.158719687150,0.000,0.007993750,0.411055,0,0,B_backup,md_backup_candidate,lowest family energy and still moderate DFT force
+gb_Sigma3_t3_Li_vac_c2_s2,t3,c2_s2,19,0.14523113,-5646.194498039606,0.000,0.007154679,0.367908,0,0,A_core,md_core_candidate,lowest family energy with lower DFT force than t3 c2_s1

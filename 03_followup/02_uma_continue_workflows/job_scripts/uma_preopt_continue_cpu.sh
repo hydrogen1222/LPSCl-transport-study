@@ -1,0 +1,67 @@
+#!/bin/bash
+#SBATCH --job-name=uma_continue
+#SBATCH --partition=workq
+#SBATCH --nodelist=baifq-hpc141
+#SBATCH --nodes=1
+#SBATCH --ntasks=1
+#SBATCH --cpus-per-task=8
+#SBATCH --mem=32G
+#SBATCH --time=24:00:00
+
+set -euo pipefail
+
+STRUCTURE_FILE="${UMA_STRUCTURE_FILE:-POSCAR}"
+MODEL_PATH="${UMA_MODEL_PATH:-/home/ctan/uma-m-1p1.pt}"
+ENV_PREFIX="${UMA_ENV_PREFIX:-/home/ctan/uma-offline-env}"
+TASK_NAME="${UMA_TASK_NAME:-omat}"
+OPTIMIZER="${UMA_OPTIMIZER:-FIRE}"
+FMAX="${UMA_FMAX:-0.15}"
+MAX_STEPS="${UMA_MAX_STEPS:-300}"
+RUN_NAME="${UMA_RUN_NAME:-uma_continue}"
+OUTPUT_ROOT="${UMA_OUTPUT_ROOT:-${SLURM_SUBMIT_DIR}}"
+
+if [[ ! -f "${STRUCTURE_FILE}" ]]; then
+  echo "Input structure not found: ${STRUCTURE_FILE}" >&2
+  exit 1
+fi
+
+if [[ ! -x "${ENV_PREFIX}/bin/python" ]]; then
+  echo "UMA offline environment not found: ${ENV_PREFIX}" >&2
+  exit 1
+fi
+
+if [[ ! -f "${MODEL_PATH}" ]]; then
+  echo "UMA model not found: ${MODEL_PATH}" >&2
+  exit 1
+fi
+
+source "${ENV_PREFIX}/bin/activate"
+
+export OMP_NUM_THREADS="${SLURM_CPUS_PER_TASK:-8}"
+export MKL_NUM_THREADS="${OMP_NUM_THREADS}"
+export OPENBLAS_NUM_THREADS="${OMP_NUM_THREADS}"
+export PYTHONNOUSERSITE=1
+
+cd "${SLURM_SUBMIT_DIR}"
+
+uma_calc opt "${STRUCTURE_FILE}" \
+  --model "${MODEL_PATH}" \
+  --task "${TASK_NAME}" \
+  --device cpu \
+  --optimizer "${OPTIMIZER}" \
+  --fmax "${FMAX}" \
+  --max-steps "${MAX_STEPS}" \
+  --output "${OUTPUT_ROOT}" \
+  --name "${RUN_NAME}"
+
+RESULT_DIR="${OUTPUT_ROOT}/${RUN_NAME}"
+for artifact in CONTCAR OUTCAR OSZICAR optimization.log uma_results.json; do
+  if [[ -f "${RESULT_DIR}/${artifact}" ]]; then
+    cp -f "${RESULT_DIR}/${artifact}" "${artifact}"
+  fi
+done
+
+if [[ ! -f "CONTCAR" ]]; then
+  echo "UMA optimization did not produce CONTCAR" >&2
+  exit 1
+fi

@@ -1,0 +1,21 @@
+structure_id,category,translation,li_vac_count,n_atoms,start_geometry,start_source,phase,priority_rank,recommended_use,recommended_first_action,notes
+bulk_ordered,bulk,NA,0,416,POSCAR.start,done.cif-derived bulk supercell,smoke,1,bulk neutral baseline and GPU smoke test,MD_DIRECT,cloud smoke test first; also needed for conductivity baseline
+gb_Sigma3_t3,gb,t3,0,624,POSCAR.start,refined UMA CONTCAR from 04_md_pilot,smoke,2,realistic GB GPU smoke test and neutral GB baseline,MD_DIRECT,lowest-energy neutral GB candidate
+bulk_Li_vac_c1_s1,bulk,NA,1,415,POSCAR.start,original vacancy POSCAR from 01_structures,core,3,bulk defect control for conductivity comparison,OPT_THEN_MD,run a short UMA opt first on GPU before formal MD
+gb_Sigma3_t3_Li_vac_c1_s1,gb,t3,1,623,POSCAR.start,refined UMA CONTCAR from 04_md_pilot,core,4,core GB plus vacancy production case,MD_DIRECT,lowest family energy and lowest DFT force overall in c1_s1 family
+gb_Sigma3_t3_Li_vac_c2_s2,gb,t3,2,622,POSCAR.start,refined UMA CONTCAR from 04_md_pilot,core,5,core GB plus double-vacancy production case,MD_DIRECT,lowest family energy with lower DFT force than t3 c2_s1
+gb_Sigma3_t1,gb,t1,0,624,POSCAR.start,refined UMA CONTCAR from 04_md_pilot,contrast,6,neutral GB contrast against t3,MD_DIRECT,use after t3 smoke/core path is stable
+gb_Sigma3_t1_Li_vac_c1_s1,gb,t1,1,623,POSCAR.start,refined UMA CONTCAR from 04_md_pilot,contrast,7,t1 vacancy contrast case,MD_DIRECT,best t1 geometry in c1 family
+gb_Sigma3_t2_Li_vac_c1_s2,gb,t2,1,623,POSCAR.start,refined UMA CONTCAR from 04_md_pilot,contrast,8,t2 vacancy contrast case,MD_DIRECT,best t2 contrast case from follow-up results
+gb_Sigma3_t2,gb,t2,0,624,POSCAR.start,original POSCAR from 01_structures,backup,9,optional neutral t2 contrast,OPT_THEN_MD,run only if t1/t3 comparisons are insufficient
+gb_Sigma3_t3_Li_vac_c1_s2,gb,t3,1,623,POSCAR.start,original POSCAR from 01_structures,backup,10,backup t3 vacancy case in c1_s2 family,OPT_THEN_MD,good backup if c1_s1 trajectory behaves oddly
+gb_Sigma3_t3_Li_vac_c2_s1,gb,t3,2,622,POSCAR.start,original POSCAR from 01_structures,backup,11,backup t3 vacancy case in c2_s1 family,OPT_THEN_MD,backup double-vacancy t3 case
+bulk_Li_vac_c1_s2,bulk,NA,1,415,POSCAR.start,original vacancy POSCAR from 01_structures,backup,12,backup bulk single-vacancy case,OPT_THEN_MD,optional bulk defect cross-check
+bulk_Li_vac_c2_s1,bulk,NA,2,414,POSCAR.start,original double-vacancy POSCAR from 01_structures,backup,13,backup bulk double-vacancy case,OPT_THEN_MD,optional
+bulk_Li_vac_c2_s2,bulk,NA,2,414,POSCAR.start,original double-vacancy POSCAR from 01_structures,backup,14,backup bulk double-vacancy case,OPT_THEN_MD,optional
+gb_Sigma3_t1_Li_vac_c1_s2,gb,t1,1,623,POSCAR.start,original POSCAR from 01_structures,hold,15,high-energy t1 vacancy backup,OPT_THEN_MD,not recommended before core and contrast are finished
+gb_Sigma3_t1_Li_vac_c2_s1,gb,t1,2,622,POSCAR.start,original POSCAR from 01_structures,hold,16,high-force t1 double-vacancy backup,OPT_THEN_MD,low priority
+gb_Sigma3_t1_Li_vac_c2_s2,gb,t1,2,622,POSCAR.start,original POSCAR from 01_structures,hold,17,high-force t1 double-vacancy backup,OPT_THEN_MD,low priority
+gb_Sigma3_t2_Li_vac_c1_s1,gb,t2,1,623,POSCAR.start,original POSCAR from 01_structures,hold,18,non-preferred t2 c1_s1 backup,OPT_THEN_MD,low priority
+gb_Sigma3_t2_Li_vac_c2_s1,gb,t2,2,622,POSCAR.start,original POSCAR from 01_structures,hold,19,non-preferred t2 c2_s1 backup,OPT_THEN_MD,low priority
+gb_Sigma3_t2_Li_vac_c2_s2,gb,t2,2,622,POSCAR.start,original POSCAR from 01_structures,hold,20,non-preferred t2 c2_s2 backup,OPT_THEN_MD,low priority

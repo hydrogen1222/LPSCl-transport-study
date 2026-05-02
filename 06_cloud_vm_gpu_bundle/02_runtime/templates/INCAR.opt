@@ -1,0 +1,28 @@
+# Geometry Optimization Settings
+# UMA Calculator - VASP-style input
+
+# Calculation Type
+CALC_TYPE = OPT
+TASK = omat
+
+# Model Settings
+MODEL_PATH = uma-s-1.pt
+DEVICE = cpu
+INFERENCE_MODE = default
+
+# Optimization Settings
+OPT_ALGO = FIRE          # FIRE, BFGS, or LBFGS
+FMAX = 0.05              # Force convergence threshold (eV/Å)
+MAX_STEPS = 500          # Maximum optimization steps
+CELL_OPT = .FALSE.       # Optimize cell parameters (requires stress support)
+FIX_SYMMETRY = .FALSE.   # Preserve crystal symmetry
+
+# Output Control
+WRITE_FORCES = .TRUE.
+WRITE_STRESS = .TRUE.
+OUTPUT_FORMAT = VASP
+
+# Notes:
+# - CELL_OPT requires TASK that supports stress (omat, oc20, etc.)
+# - For volume relaxation, enable CELL_OPT = .TRUE.
+# - FIRE is robust for most systems, BFGS for small systems, LBFGS for large systems

@@ -1,0 +1,7 @@
+structure_id,stage_order,stage_name,run_type,path,restart_from,enabled
+gb_Sigma3_t3,0,02_uma_md_nvt,UMA_MD,gb_Sigma3_t3/02_uma_md_nvt,../00_uma_relax/CONTCAR,1
+gb_Sigma3_t1,0,02_uma_md_nvt,UMA_MD,gb_Sigma3_t1/02_uma_md_nvt,../00_uma_relax/CONTCAR,1
+gb_Sigma3_t3_Li_vac_c1_s1,0,02_uma_md_nvt,UMA_MD,gb_Sigma3_t3_Li_vac_c1_s1/02_uma_md_nvt,../00_uma_relax/CONTCAR,1
+gb_Sigma3_t3_Li_vac_c2_s2,0,02_uma_md_nvt,UMA_MD,gb_Sigma3_t3_Li_vac_c2_s2/02_uma_md_nvt,../00_uma_relax/CONTCAR,1
+gb_Sigma3_t1_Li_vac_c1_s1,0,02_uma_md_nvt,UMA_MD,gb_Sigma3_t1_Li_vac_c1_s1/02_uma_md_nvt,../00_uma_relax/CONTCAR,1
+gb_Sigma3_t2_Li_vac_c1_s2,0,02_uma_md_nvt,UMA_MD,gb_Sigma3_t2_Li_vac_c1_s2/02_uma_md_nvt,../00_uma_relax/CONTCAR,1
